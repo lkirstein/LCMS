@@ -47,8 +47,9 @@ CREATE TABLE Post(
         ID:       1
         Username: Administrator
         Password: ChangeMe123!
+        AccessLevel: 2
         E-Mail: None (NULL)
         Creation Date: 01-01-2024
     -------------------------
 */
-INSERT INTO User VALUES (1, "Administrator", "$2y$10$4qeM8OCi572M/zZrwpwF7ehywOoZ1BIQSapGDB9M/2WW32rtYDDO2", NULL, 20240101);
+INSERT INTO User VALUES (1, "Administrator", "$2y$10$4qeM8OCi572M/zZrwpwF7ehywOoZ1BIQSapGDB9M/2WW32rtYDDO2", 2, NULL, 20240101);
