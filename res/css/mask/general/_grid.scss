@@ -1,0 +1,12 @@
+body {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
+main { grid-area: 2 / 2 / 3 / 3; }
+    
+    
+    
