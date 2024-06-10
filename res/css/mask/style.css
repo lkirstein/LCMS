@@ -1,1 +1,123 @@
-/*# sourceMappingURL=style.css.map */
+/* --- Frontend Styles --- */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/* Standard Font */
+* {
+  /* Fallback Font */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+main {
+  grid-area: 2/2/3/3;
+}
+
+/* --- Normalize --- */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* --- Components --- */
+form {
+  margin: 4em;
+  padding: 2em;
+  border: 1px solid #a1a1a1;
+  border-radius: 8px;
+}
+
+input {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type=text], input[type=password] {
+  background-color: #ffffff;
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 8px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ececec !important;
+  border: 1px solid #4169e1 !important;
+}
+
+input[type=submit] {
+  color: #ffffff;
+  background-color: #55b556;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 8px;
+}
+
+input[type=submit]:focus {
+  background-color: #419742;
+}
+
+input[type=submit]:hover {
+  background-color: #368638;
+}/*# sourceMappingURL=style.css.map */
