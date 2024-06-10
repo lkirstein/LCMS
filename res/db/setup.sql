@@ -20,8 +20,9 @@ CREATE TABLE User(
     User_ID int NOT NULL AUTO_INCREMENT,       /* User ID       */
     User_Name varchar(20),                    /* Username      */
     User_Password varchar(120),              /* Password      */
-    User_EMail varchar(60),                 /* E-Mail        */
-    User_CDate date,                       /* Creation Date */
+    User_AccessLevel int,                   /* Access Level  */
+    User_EMail varchar(60),                /* E-Mail        */
+    User_CDate date,                      /* Creation Date */
     PRIMARY KEY (User_ID)
 );
 
