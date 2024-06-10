@@ -1,0 +1,14 @@
+body {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 4em 1fr 4em;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
+header { grid-area: 1 / 1 / 2 / 3; }
+nav { grid-area: 2 / 1 / 4 / 2; }
+main { grid-area: 2 / 2 / 3 / 3; }
+footer { grid-area: 3 / 2 / 4 / 3; }
+    
+    
