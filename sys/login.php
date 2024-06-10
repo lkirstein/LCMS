@@ -135,7 +135,7 @@
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" placeholder="Enter Username..." required>
             <label for="password">Password:</label>
-            <input type="text" name="password" id="password" placeholder="Enter Password..." required>
+            <input type="password" name="password" id="password" placeholder="Enter Password..." required>
             <input type="submit" value="Login">
         </form>
     </main>
