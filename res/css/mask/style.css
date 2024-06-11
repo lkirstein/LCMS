@@ -79,14 +79,15 @@ main {
 form {
   margin: 4em;
   padding: 2em;
-  border: 1px solid #a1a1a1;
-  border-radius: 8px;
+  background-color: #d0d0d0;
+  border: 1px inset #a1a1a1;
 }
 
 input {
   margin-top: 0.5em;
   margin-bottom: 1em;
   padding: 0.5em;
+  width: 100%;
 }
 
 input:focus {
@@ -95,9 +96,7 @@ input:focus {
 
 input[type=text], input[type=password] {
   background-color: #ffffff;
-  width: 100%;
   border: 1px solid #000000;
-  border-radius: 8px;
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -109,9 +108,7 @@ input[type=submit] {
   color: #ffffff;
   background-color: #55b556;
   cursor: pointer;
-  width: 100%;
   border: 1px solid #000000;
-  border-radius: 8px;
 }
 
 input[type=submit]:focus {
