@@ -37,9 +37,11 @@
                 return true;
             }
         }
-
-        // TODO - How to handle no timestamp?
-
+        else
+        {
+            // Handle no session time stamp (Redirect to login, so user can log in again and get a new timestamp)
+            doRedirect("./login.php");
+        }
     }
 
 ?>
