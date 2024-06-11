@@ -52,7 +52,7 @@
         if( empty($username_err) && empty($password_err) )
         {
             // Prepare a select statement
-            $sql = "SELECT User_ID, User_Name, User_Password FROM User WHERE User_Name = ?";
+            $sql = "SELECT User_ID, User_Name, User_Password, User_AccessLevel FROM User WHERE User_Name = ?";
             
             if($stmt = mysqli_prepare($conn, $sql))
             {
@@ -72,7 +72,7 @@
                     if(mysqli_stmt_num_rows($stmt) == 1)
                     {                    
                         // Bind result variables
-                        mysqli_stmt_bind_result($stmt, $User_ID, $Username, $Hashed_Password);
+                        mysqli_stmt_bind_result($stmt, $User_ID, $Username, $Hashed_Password, $User_AccessLevel);
                         if(mysqli_stmt_fetch($stmt))
                         {
                             if(password_verify($Password, $Hashed_Password))
@@ -85,6 +85,7 @@
                                 $_SESSION["Ses_ID"] = session_create_id();
                                 $_SESSION["User_ID"] = $User_ID;
                                 $_SESSION["User_Name"] = $Username;
+                                $_SESSION["User_AccessLevel"] = $User_AccessLevel;
                                 
                                 // Set new session timestamp.
                                 setSessionTimestamp();

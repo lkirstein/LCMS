@@ -1,7 +1,7 @@
 <?php
 
     // Sessins is Calculated Minutes * Seconds
-    $Session_Duration = (1 * 5);
+    $Session_Duration = (5 * 60);
 
     function destroySession() {
         // Destroy session.
@@ -40,6 +40,27 @@
         else
         {
             // Handle no session time stamp (Redirect to login, so user can log in again and get a new timestamp)
+            doRedirect("./login.php");
+        }
+    }
+
+    // Checks if the Access Level of the user is equal to the reqired (passed) value.
+    function checkSessionAccessLevel($requiredLevel) {
+        // Check if the access level is set
+        if ( isset($_SESSION["User_AccessLevel"]) )
+        {
+            if ( $_SESSION["User_AccessLevel"] == $requiredLevel)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            // Handle no access level (Redirect to login, so user can log in to set the level again)
             doRedirect("./login.php");
         }
     }
