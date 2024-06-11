@@ -1,12 +1,19 @@
 <?php
 
     session_start();
+    include './sesconf.php';
 
-    // Check if user is logged in
-    if ( isset( $_SESSION["loggedin"] ) && $_SESSION["loggedin"] === true)
+    // Check if the "active" variable is set and is "true"
+    if ( isset($_SESSION["active"]) && $_SESSION["active"] === true)
     {
-        header("location: ./dashboard/index.php");
-        exit;
+        if (checkSessionTimestamp($Session_Duration) )
+        {  
+            doRedirect("./dashboard/index.php");
+        }
+        else
+        {
+            destroySession();
+        }
     }
 
 
@@ -74,12 +81,16 @@
                                 session_start();
                                 
                                 // Store data in session variables
-                                $_SESSION["loggedin"] = true;
-                                $_SESSION["id"] = $User_ID;
-                                $_SESSION["username"] = $Username;                            
+                                $_SESSION["active"] = true;
+                                $_SESSION["Ses_ID"] = session_create_id();
+                                $_SESSION["User_ID"] = $User_ID;
+                                $_SESSION["User_Name"] = $Username;
                                 
-                                // Redirect user to welcome page
-                                header("location: ./dashboard/index.php");
+                                // Set new session timestamp.
+                                setSessionTimestamp();
+                                
+                                // Redirect user to dashboard
+                                doRedirect("./dashboard/index.php");
                             } 
                             else
                             {
