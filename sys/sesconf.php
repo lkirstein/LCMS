@@ -1,7 +1,7 @@
 <?php
 
     // Sessins is Calculated Minutes * Seconds
-    $Session_Duration = (120 * 60);
+    $Session_Duration = (1 * 5);
 
     function destroySession() {
         // Destroy session.
