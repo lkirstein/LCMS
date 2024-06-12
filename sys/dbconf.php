@@ -4,8 +4,8 @@
   // Will be set by the installation script.
   // Change to fit your Development-Environment
   $Servername = "localhost";
-  $Username = "root";
-  $Password = "root";
+  $Username = "lcms";
+  $Password = "lcms";
   $Database = "lcms";
 
   // Create connection
