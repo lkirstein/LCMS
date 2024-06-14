@@ -1,0 +1,26 @@
+@startuml
+
+[*] --> login
+
+login: Login Page
+login --> index : Login
+
+index: Welcome Page (Backend)
+index --> posts
+index --> pages
+index --> media
+index --> settings
+index --> users : Access Level Check
+
+posts: Create Text Posts
+
+pages: Create Webpages
+
+media: Upload Files
+
+settings: Frontend Settings
+
+users: Usermanagement
+
+
+@enduml
