@@ -7,3 +7,10 @@
     margin: 0px;
     padding: 0px;
 }
+
+@import "_vars.scss";
+
+@import "components/_header.scss";
+@import "components/_nav.scss";
+@import "components/_main.scss";
+@import "components/_footer.scss";  
