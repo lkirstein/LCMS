@@ -32,12 +32,23 @@ CREATE TABLE User(
 CREATE TABLE Post(
     Post_ID int NOT NULL AUTO_INCREMENT,        /* Post ID                  */
     Post_Title varchar(20),                    /* Post Title               */
-    Post_Descriptions varchar(50),            /* Post Description         */
+    Post_Desc varchar(50),                    /* Post Description         */
     Post_Content varchar(200),               /* Post Content - TODO      */
     Post_Date date,                         /* Post Creation Date       */
     Post_User int,                         /* Post Creator (User (ID)) */
     PRIMARY KEY (Post_ID),
     FOREIGN KEY (Post_User) REFERENCES User(User_ID)
+);
+
+
+
+/* Create Table for Files & Meida */
+CREATE TABLE File(
+    File_ID int NOT NULL AUTO_INCREMENT,        /* File ID        */
+    File_Title varchar(40),                    /* File Title     */
+    File_Desc varchar(40),                    /* File Desc.     */
+    File_Object blob,                        /* Actual File    */
+    File_UploadDate date,                   /* File Upl. Date */
 );
 
 
