@@ -1,0 +1,17 @@
+nav {
+    color: var(--Nav-Foreground);
+    background-color: var(--Nav-Background);
+
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    color: var(--Nav-Foreground);
+
+    text-decoration: none;
+
+    width: calc(100% - 2em);
+
+    padding: 1em;
+}

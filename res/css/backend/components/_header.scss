@@ -1,0 +1,11 @@
+header {
+    color: var(--Header-Foreground);
+    background-color: var(--Header-Background);
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    padding: 1em;
+}
